@@ -2,6 +2,7 @@ import { useState } from "react";
 import SearchBar from "./SearchBar";
 import ProfileList from "./ProfileList";
 import profiles from "./Data";
+import "../styles/ProfileSearchApp.css"
 
 function ProfileSearchApp() {
   const [filteredList, setFilteredList] = useState(profiles);
@@ -22,7 +23,7 @@ function ProfileSearchApp() {
   };
 
   return (
-    <div>
+    <div className="container">
       <SearchBar onChange={handleChange} />
       <ProfileList filteredList={filteredList} />
     </div>

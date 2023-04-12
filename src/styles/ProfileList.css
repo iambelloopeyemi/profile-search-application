@@ -1,0 +1,20 @@
+.profile-list-container {
+    border: 1px solid black;
+    width: 850px;
+}
+
+.profile-list-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.profile-list {
+    display: flex;
+    gap: 15px;
+}
+
+.profile-details {
+    display: flex;
+    margin-top: 10px;
+}
