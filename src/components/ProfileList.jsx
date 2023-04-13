@@ -1,18 +1,19 @@
-import "../styles/ProfileList.css"
+import "../styles/ProfileList.css";
 
 export default function ProfileList({ filteredList }) {
   const userProfiles = filteredList.map((profile) => {
+    const { picture, id, title, firstName, lastName } = profile;
     return (
-      <li key={profile.id} className="profile-list">
-        <div>
-          <img src={profile.picture} alt={profile.firstName} />
+      <li key={id} className="profile-list">
+        <div className="profile-picture-wrapper">
+          <img src={picture} alt={profile.firstName} />
         </div>
         <div className="profile-wrapper">
-          <div className="profile-id">{profile.id}</div>
+          <div className="profile-id">{id}</div>
           <div className="profile-details">
-            <p className="profile-title">{profile.title}</p>
-            <p className="profile-name">{profile.firstName}</p>
-            <p className="profile-name">{profile.lastName}</p>
+            <p className="profile-title">{title}</p>
+            <p className="profile-name">{firstName}</p>
+            <p className="profile-name">{lastName}</p>
           </div>
         </div>
       </li>

@@ -1,5 +1,4 @@
 .profile-list-container {
-    border: 1px solid black;
     width: 850px;
 }
 
@@ -12,9 +11,34 @@
 .profile-list {
     display: flex;
     gap: 15px;
+    background-color: white;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.profile-picture-wrapper {
+    padding: 8px;
+}
+
+.profile-wrapper {
+    padding-top: 12px;
+}
+
+.profile-id {
+    font-size: small;
+}
+
+.profile-title::after {
+    content: '.';
 }
 
 .profile-details {
     display: flex;
-    margin-top: 10px;
+    margin-top: 8px;
+    gap: 5px;
+}
+
+.profile-title, .profile-name {
+    font-size: small;
+    font-weight: bold;
 }
