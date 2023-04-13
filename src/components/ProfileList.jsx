@@ -6,7 +6,7 @@ export default function ProfileList({ filteredList }) {
     return (
       <li key={id} className="profile-list">
         <div className="profile-picture-wrapper">
-          <img src={picture} alt={profile.firstName} />
+          <img src={picture} alt={firstName} />
         </div>
         <div className="profile-wrapper">
           <div className="profile-id">{id}</div>
@@ -22,7 +22,7 @@ export default function ProfileList({ filteredList }) {
 
   return (
     <div className="profile-list-container">
-      <ul className="profile-list-wrapper">{userProfiles}</ul>;
+      <ul className="profile-list-wrapper">{userProfiles}</ul>
     </div>
   );
 }

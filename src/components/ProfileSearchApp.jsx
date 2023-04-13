@@ -14,8 +14,8 @@ function ProfileSearchApp() {
 
     updatedList = updatedList.filter((profile) => {
       return (
-        profile.firstName.toLowerCase() == query.toLowerCase() ||
-        profile.lastName.toLowerCase() == query.toLowerCase()
+        profile.firstName.toLowerCase().includes(query) ||
+        profile.lastName.toLowerCase().includes(query)
       );
     });
 
