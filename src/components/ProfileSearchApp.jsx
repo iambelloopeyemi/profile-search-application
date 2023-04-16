@@ -13,9 +13,10 @@ function ProfileSearchApp() {
     let updatedList = [...profiles];
 
     updatedList = updatedList.filter((profile) => {
+      const name = profile.firstName + " " + profile.lastName;
       return (
-        profile.firstName.toLowerCase().includes(query) ||
-        profile.lastName.toLowerCase().includes(query)
+        profile.firstName.toLowerCase().includes(query.trim()) ||
+        profile.lastName.toLowerCase().includes(query.trim()) || name.toLowerCase().includes(query.trim())
       );
     });
 
